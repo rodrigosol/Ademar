@@ -1,3 +1,4 @@
+sol
 //X is a super class of Y and z which are sibblings
 public class RunTimeCaseDemo
 	X x = new X();
