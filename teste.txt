@@ -1,0 +1,23 @@
+//X is a super class of Y and z which are sibblings
+public class RunTimeCaseDemo
+	X x = new X();
+	Y y = new Y();
+	Z z = new Z();
+	X xy =  new Y();
+	X xz = new Z();
+	Y yz = new Z(); // Tipos incompativeis
+	Y y1 = new X(); // X is not a Y
+	Z z1 = new X(); // X is not a Z
+	X x1 = y; //Compiles ok (y is subclass of X)
+	X x2 = z; //Compiles ok (z is subclass of X)
+	Y y3 = (Y) x; //compiles OK but produces a runtime error
+	Z z3 = (Z) x; //compiles OK but produces a runtime error
+	Y y4 = (Y) x1; compiles and runs
+	z z4 = (z) x2; compiles and runs
+	Y y5 = (Y) z; compiles error (incovertible types)
+	Z z5 = (Z) y; compiles error (incovertible types)
+	Object o = z;
+	Object o1 = (Y) o; //Runtime error
+	
+	
+	
